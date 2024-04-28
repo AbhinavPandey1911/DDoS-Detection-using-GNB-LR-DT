@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body style="background: linear-gradient(to right, #ccffcc, #99ff99);"> <!-- Change gradient colors as needed -->
+    <h1>Predictions</h1>
+    <ul>
+       
+             <li>Logistic Regression F1 Score-- {{f11[0]}}</li>
+             <li>Naive Bayes F1 Score-- {{f11[1]}}</li>
+             <li>Decision Tree F1 Score-- {{f11[2]}}</li>
+
+    </ul>
+    <img src="{{ url_for('static', filename=plot_filename1) }}" alt="Confusion Matrix1">
+    <img src="{{ url_for('static', filename=plot_filename2) }}" alt="Confusion Matrix2">
+    <img src="{{ url_for('static', filename=plot_filename3) }}" alt="Confusion Matrix3">
+
+
+</body>
+</html>
