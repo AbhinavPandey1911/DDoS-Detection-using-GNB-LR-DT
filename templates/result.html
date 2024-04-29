@@ -4,20 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ccffcc, #99ff99); /* Gradient background */
+            color: #333; /* Dark font color */
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: #333; /* Dark font color on hover */
+        }
+
+        .navbar a.active {
+            background-color: #666;
+            color: white;
+        }
+    </style>
 </head>
-<body style="background: linear-gradient(to right, #ccffcc, #99ff99);"> <!-- Change gradient colors as needed -->
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a class="active" href="/results">Results</a>
+    </div>
+
     <h1>Predictions</h1>
     <ul>
-       
-             <li>Logistic Regression F1 Score-- {{f11[0]}}</li>
-             <li>Naive Bayes F1 Score-- {{f11[1]}}</li>
-             <li>Decision Tree F1 Score-- {{f11[2]}}</li>
-
+        <li>Logistic Regression F1 Score: {{ f11[0] }}</li>
+        <li>Naive Bayes F1 Score: {{ f11[1] }}</li>
+        <li>Decision Tree F1 Score: {{ f11[2] }}</li>
     </ul>
     <img src="{{ url_for('static', filename=plot_filename1) }}" alt="Confusion Matrix1">
     <img src="{{ url_for('static', filename=plot_filename2) }}" alt="Confusion Matrix2">
     <img src="{{ url_for('static', filename=plot_filename3) }}" alt="Confusion Matrix3">
-
-
 </body>
 </html>
