@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Project</title>
     <style>
         body {
             margin: 0;
@@ -33,17 +33,55 @@
             background-color: #666;
             color: white;
         }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 30%;
+            margin: 20px;
+            float: left;
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container p {
+            text-align: justify;
+        }
     </style>
 </head>
 <body style="background: linear-gradient(to right, #ffcccc, #ffcc99);">
     <div class="navbar">
         <a href="/">Home</a>
-        <a class="active" href="about.html">About</a>
+        <a class="active" href="/about">About Project</a>
         <a href="/contact">Contact Us</a>
     </div>
 
-    <h1>About Us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
-    <p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim.</p>
+    <h1>About Project</h1>
+    <p>The project aims to address the challenges posed by Distributed Denial of Service (DDoS) attacks. DDoS attacks are malicious attempts to disrupt the normal traffic of a targeted server, service, or network by overwhelming it with a flood of internet traffic. These attacks can cause significant downtime and disrupt the functioning of online services.</p>
+
+    <h2>DDoS Detection Techniques</h2>
+
+    <div class="card">
+        <div class="container">
+            <h4>Logistic Regression</h4>
+            <p>Logistic Regression is a statistical method used for binary classification problems. In DDoS detection, it can be used to analyze various features of network traffic and classify whether a particular flow is part of a DDoS attack or not.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="container">
+            <h4>Naive Bayes</h4>
+            <p>Naive Bayes is a probabilistic classifier based on Bayes' theorem. It assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. In DDoS detection, Naive Bayes can be used to calculate the probability of a flow belonging to a DDoS attack class.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="container">
+            <h4>Decision Trees</h4>
+            <p>Decision Trees are a popular machine learning algorithm for classification and regression tasks. In DDoS detection, decision trees can be constructed based on various features extracted from network traffic to classify whether a flow is normal or malicious.</p>
+        </div>
+    </div>
 </body>
 </html>
