@@ -8,6 +8,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #e0e0e0; /* Darker grey background */
+            color: #333; /* Dark font color */
         }
 
         .navbar {
@@ -26,16 +28,31 @@
 
         .navbar a:hover {
             background-color: #ddd;
-            color: black;
+            color: #333; /* Dark font color on hover */
         }
 
         .navbar a.active {
             background-color: #666;
             color: white;
         }
+
+        p {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0; /* Lighter grey background */
+            border-left: 5px solid #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
-<body style="background: linear-gradient(to right, #ffcccc, #ffcc99);">
+<body>
     <div class="navbar">
         <a class="active" href="/">Home</a>
         <a href="/about">About</a>
@@ -43,6 +60,8 @@
     </div>
 
     <h1>Upload a CSV File</h1>
+    <p>A Distributed Denial of Service (DDoS) attack is a malicious attempt to disrupt normal traffic of a targeted server, service, or network by overwhelming it with a flood of internet traffic. This can lead to downtime, disrupting the normal functioning of online services.</p>
+    <p>Please upload a CSV file with datapoints to determine whether it was a DDoS attack or not.</p>
     <form action="/predict" method="post" enctype="multipart/form-data">
         <input type="file" name="file">
         <button type="submit">Upload</button>
